@@ -1,0 +1,28 @@
+﻿<Window x:Class="RoyalBd.UI.View.DashboardView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dash Board" Height="300" Width="300" WindowState="Maximized" WindowStartupLocation="CenterScreen" Icon="/RoyalBd.UI;component/Styles/Inventory.ico">
+    <DockPanel Margin="0">
+        <Menu VerticalAlignment="Top" DockPanel.Dock="Top">
+            <MenuItem Header="Challan" >
+                <MenuItem Header="New Challan" Click="NewChallanMenuItemClick" />
+                <MenuItem Header="Challan List" Click="ChalanListMenuItemClick"/>
+            </MenuItem>
+            <MenuItem Header="Customer" >
+                <MenuItem Header="New Customer" Click="NewCustomerMenuItemClick"/>
+                <MenuItem Header="Customer List" Click="CustomerListMenuItemClick"/>
+            </MenuItem>
+            <MenuItem Header="Description" >
+                <MenuItem Header="New Description" Click="NewDescriptionMenuItemClick"/>
+                <MenuItem Header="Description List" Click="DescriptionListMenuItemClick"/>
+            </MenuItem>
+            <MenuItem Header="Item" >
+                <MenuItem Header="New Item" Click="NewItemMenuItemClick" />
+                <MenuItem Header="Item List" Click="ItemListMenuItemClick"/>
+            </MenuItem>
+        </Menu>
+        <Grid Style="{ StaticResource WindowStyle}"/>
+
+    </DockPanel>
+
+</Window>

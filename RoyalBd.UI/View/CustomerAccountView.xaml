@@ -1,0 +1,58 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Model="clr-namespace:RoyalBd.Model.Model;assembly=RoyalBd.Model" x:Class="RoyalBd.UI.View.CustomerAccountView"
+        Title="Customer Account" Height="418" Width="565" x:Name="CustomerAccountWindow" Icon="/RoyalBd.UI;component/Styles/Inventory.ico">
+    <Grid Style="{StaticResource WindowStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="340*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Customer Account" Style="{StaticResource HeaderStyle}"/>
+        <Grid Grid.Row="1" x:Name="AccountInfoGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110*"/>
+                <ColumnDefinition Width="142*"/>
+                <ColumnDefinition Width="122*"/>
+                <ColumnDefinition Width="153*"/>
+                <ColumnDefinition Width="31*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="127*"/>
+                <RowDefinition Height="213*"/>
+            </Grid.RowDefinitions>
+            <Grid.DataContext>
+                <Model:CustomerAccountModel/>
+            </Grid.DataContext>
+            <TextBlock HorizontalAlignment="Right" Margin="0,21,0,0" TextWrapping="Wrap" Text="Total :" VerticalAlignment="Top" Height="17.733" Width="35.873"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Margin="0,44,0,0" TextWrapping="Wrap" Text="Paid :" VerticalAlignment="Top" Height="17.733" Width="42.067"/>
+            <TextBlock Margin="5,21,0,0" TextWrapping="Wrap" Text="{Binding TotalDue}" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1" Height="17.733"/>
+            <TextBlock Margin="5,44,0,0" TextWrapping="Wrap" Text="{Binding TotalPaid}" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1" Height="17.733"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="1" Margin="2.5,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"
+			        Grid.Row="0" Grid.Column="1">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Margin="0,72.5,0,0" TextWrapping="Wrap" Text="Balance :" VerticalAlignment="Top" Height="17.733" Width="51.663"/>
+            <TextBlock Margin="5,72.5,0,0" TextWrapping="Wrap" Text="{Binding Balance}" VerticalAlignment="Top" Grid.Row="0"
+			           Grid.Column="1" Height="17.733"/>
+            <TextBlock HorizontalAlignment="Right" Margin="0,46,0,0" TextWrapping="Wrap" Text="Amount :" VerticalAlignment="Top" Height="17.733" Grid.Column="2" Width="54.05"/>
+            <TextBox Grid.Column="3" Height="23" Margin="5,44,0,0" TextWrapping="Wrap" Text="{Binding PaidAmount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+            <Button Content="Paid" Grid.Column="3" HorizontalAlignment="Center" Margin="0,0,0,5" VerticalAlignment="Bottom" Height="34" Width="79" Command="{Binding ElementName=CustomerAccountWindow, Path=DataContext.PaidCommand}" CommandParameter="{Binding ElementName=AccountInfoGrid, Path=DataContext}"/>
+            <DataGrid Margin="10,0,10,10" Grid.Row="1" Grid.ColumnSpan="5" ItemsSource="{Binding ElementName=CustomerAccountWindow, Path=DataContext.CustomerLogs}" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding LogDate,  StringFormat={}\{0:dd/MM/yyyy hh:mm\}}" Header="Date" MinWidth="100" />
+                    <DataGridTextColumn Binding="{Binding LogType}" Header="Description" MinWidth="100" />
+                    <DataGridTextColumn Binding="{Binding Amount}" Header="Paid/Due" MinWidth="100" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </Grid>
+    </Grid>
+</Window>

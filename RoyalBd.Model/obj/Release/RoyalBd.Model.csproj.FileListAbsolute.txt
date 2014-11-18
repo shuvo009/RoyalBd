@@ -1,0 +1,16 @@
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\RoyalBd.Model.dll.config
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\RoyalBd.Model.dll
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\RoyalBd.Model.pdb
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\GalaSoft.MvvmLight.dll
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\GalaSoft.MvvmLight.Extras.dll
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\Microsoft.Practices.ServiceLocation.dll
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\System.Windows.Interactivity.dll
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\GalaSoft.MvvmLight.pdb
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\GalaSoft.MvvmLight.xml
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\GalaSoft.MvvmLight.Extras.pdb
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\GalaSoft.MvvmLight.Extras.xml
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\Microsoft.Practices.ServiceLocation.pdb
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\Microsoft.Practices.ServiceLocation.xml
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\bin\Release\System.Windows.Interactivity.xml
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\obj\Release\RoyalBd.Model.dll
+F:\Projects\Royalbd\RoyalBd\RoyalBd.Model\obj\Release\RoyalBd.Model.pdb
